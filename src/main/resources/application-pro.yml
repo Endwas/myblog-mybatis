@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.254.100:3306/myblog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+logging:
+  level:
+    root: warn
+    com.endwas: info
+  file:
+    name: log/blog-pro.log
+
+mybatis:
+  type-aliases-package: com.endwas.entity
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+
+
+
+
