@@ -60,14 +60,14 @@ public class CommentController {
         return "blog :: commentList";
     }
 
-    // 删除评论
-//    @GetMapping("/comment/{blogId}/{id}/delete")
-//    public String delete(@PathVariable Long blogId, @PathVariable Long id, Comment comment, RedirectAttributes attributes, Model model){
-//        commentService.deleteComment(comment,id);
-//        DetailedBlog detailedBlog = blogService.getDetailedBlog(blogId);
-//        List<Comment> comments = commentService.listCommentByBlogId(blogId);
-//        model.addAttribute("blog", detailedBlog);
-//        model.addAttribute("comments", comments);
-//        return "blog";
-//    }
+//     删除评论
+   @GetMapping("/comment/{blogId}/{id}/delete")
+   public String delete(@PathVariable Long blogId, @PathVariable Long id, Comment comment, RedirectAttributes attributes, Model model){
+       commentService.deleteComment(comment,id);
+       DetailedBlog detailedBlog = blogService.getDetailedBlog(blogId);
+       List<Comment> comments = commentService.listCommentByBlogId(blogId);
+       model.addAttribute("blog", detailedBlog);
+       model.addAttribute("comments", comments);
+       return "blog";
+   }
 }
