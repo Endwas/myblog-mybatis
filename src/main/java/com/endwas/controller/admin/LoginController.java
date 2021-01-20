@@ -24,7 +24,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping("/admin")
 public class LoginController {
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+   
 
     @Autowired
     private UserService userService;
@@ -38,16 +38,8 @@ public class LoginController {
      */
     @GetMapping
     public String loginPage(HttpServletRequest httpServletRequest){
-        // 通过nginx转发的客户端ip
-        String ip = httpServletRequest.getHeader("x-forwarded-for");
-        if (ip == null || ip.length() == 0) {
-            // 从request中获取ip
-            ip = httpServletRequest.getRemoteAddr();
-            if (ip == null || ip.length() == 0) {
-                ip = "127.0.0.1";
-            }
-        }
-        logger.warn("A Client:{} is ready to login Admin System!!", ip);
+   
+      
         return "admin/login";
     }
 
@@ -72,13 +64,12 @@ public class LoginController {
         if (user != null) {
             user.setPassword(null);
             session.setAttribute("user",user);
-            logger.warn("A Client:{} has logined successfully!!!", httpServletRequest.getRemoteAddr());
+           
 
             return "admin/index";
         } else {
             attributes.addFlashAttribute("message", "用户名和密码错误");
-            logger.warn("A Client:{} has logined failure!!!", httpServletRequest.getRemoteAddr());
-
+         
             return "redirect:/admin";
         }
     }
