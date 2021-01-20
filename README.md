@@ -5,8 +5,8 @@
 > **博客的前端代码地址：https://github.com/Endwas/myblog-web**
 
 > **博客的mybatis持久层代码地址：https://github.com/Endwas/myblog-mybatis**
-如果喜欢感谢stars~
 
+### 如果喜欢感谢stars~
 博客的图片展示：[https://blog.csdn.net/qq_40922616/article/details/112621739](https://blog.csdn.net/qq_40922616/article/details/112621739)
 
 
