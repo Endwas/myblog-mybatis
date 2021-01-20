@@ -63,9 +63,9 @@ public class MessageController {
     }
 
     // 删除留言
-//    @GetMapping("/messages/{id}/delete")
-//    public String delete(@PathVariable Long id, RedirectAttributes attributes, Model model){
-//        messageService.deleteMessage(id);
-//        return "redirect:/message";
-//    }
+   @GetMapping("/messages/{id}/delete")
+   public String delete(@PathVariable Long id, RedirectAttributes attributes, Model model){
+       messageService.deleteMessage(id);
+       return "redirect:/message";
+   }
 }
