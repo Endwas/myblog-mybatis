@@ -6,10 +6,12 @@
 
 > **博客的mybatis持久层代码地址：https://github.com/Endwas/myblog-mybatis**
 如果喜欢感谢stars~
+
 博客的图片展示：[https://blog.csdn.net/qq_40922616/article/details/112621739](https://blog.csdn.net/qq_40922616/article/details/112621739)
 
-### 个人博客系统使用技术（springboot + mybatis + mysql）
 
+### 个人博客系统使用技术（springboot + mybatis + mysql）
+### 声明：源码仅供学习，请勿用于商业途径，否则责任自负
 #### 一、技术栈
 
 ##### 1.前端
